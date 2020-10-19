@@ -1,0 +1,96 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-image: url(https://i.pinimg.com/564x/cc/11/1c/cc111c9c3ad172a22e2c7ea3e250ee96.jpg);
+    background-size: 100% 100% ;
+    background-position: top center;
+}
+
+.app-wrap{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+     background-color: none;
+     
+}
+ header{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 100px 15px 15px;
+
+ }
+
+ header input {
+     width: 100%;
+     max-width: 200px;
+     padding: 10px 15px;
+     outline: none;
+     background-color:transparent;
+     border-top-style: hidden;
+     border-right-style: hidden;
+     border-left-style: hidden;
+     border-bottom-style: groove;
+     background-color:transparent;
+     font-size: 20px;
+     
+ }
+
+ main{
+     flex: 1 1 100%;
+     padding: 25px 25px 50px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+ }
+
+ .location .city{
+     color: rgb(0,0,0);
+     font-size: 32px;
+     font-weight: 500;
+     margin-bottom: 5px;
+
+ }
+
+
+ .location .date{
+     color: rgb(0, 0, 0);
+     font-size: 18px;
+
+ }
+
+ .current .temp{
+     color: rgb(80, 69, 69);
+     font-size: 82px;
+     font-weight: 900;
+     margin: 30px 0px;
+     
+
+ }
+
+ .current .temp span{
+     font-weight: 500;
+
+ }
+
+ .current .weather{
+     color: rgb(80, 69, 69);
+     font-size: 32px;
+     font-weight: 700;
+     font-style: italic;
+     margin-bottom: 15px;
+
+ }
+
+ .current .hi-low{
+     color: rgb(80, 69, 69);
+     font-size: 24px;
+     font-weight: 500;
+     
+ }
