@@ -11,7 +11,7 @@ body{
     background-position: top center;
 }
 
-.app-wrap{
+.packmark{
    display: flex;
    flex-direction: column;
    min-height: 100vh;
@@ -50,7 +50,7 @@ body{
      text-align: center;
  }
 
- .location .city{
+ .loc .city{
      color: rgb(0,0,0);
      font-size: 32px;
      font-weight: 500;
@@ -59,13 +59,13 @@ body{
  }
 
 
- .location .date{
+ .loc .date{
      color: rgb(0, 0, 0);
      font-size: 18px;
 
  }
 
- .current .temp{
+ .current .temperature{
      color: rgb(80, 69, 69);
      font-size: 82px;
      font-weight: 900;
@@ -74,7 +74,7 @@ body{
 
  }
 
- .current .temp span{
+ .current .temperature span{
      font-weight: 500;
 
  }
@@ -88,7 +88,7 @@ body{
 
  }
 
- .current .hi-low{
+ .current .high-low{
      color: rgb(80, 69, 69);
      font-size: 24px;
      font-weight: 500;
