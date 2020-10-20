@@ -18,6 +18,9 @@ function getResults(Value){
            return weather.json();
        }).then(displayResults);
        }
+.catch(() => {
+    msg.textContent = "Enter a city";
+  });
 
        function displayResults(weather){
          console.log(weather);
