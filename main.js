@@ -1,44 +1,44 @@
 const api={ key: "b092b19b34b04b06e0260e9acd7f0578",
-base: "https://api.openweathermap.org/data/2.5/weather?id=1277333&appid=b092b19b34b04b06e0260e9acd7f0578"
+base: "https://api.openweathermap.org/data/2.5/"
 }
 
-const searchbox = document.querySelector(".search-box");
-searchbox.addEventListener("keypress", setQuery);
+const searchbox = document.querySelector(".search");
+searchbox.addEventListener("keypress", setValue);
 
-function setQuery(evt){
+function setValue(evt){
     if (evt.keyCode==13){
-       // getResults(searchbox.value);
+       
          console.log(searchbox.value);
     }
 }
-
-function getResults(query){
-   // fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-    fetch(fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`))  
+     
+function getResults(Value){   
+    fetch(`${api.base}weather?q=${Value}&units=metric&APPID=${api.key}`)
        .then(weather => {
            return weather.json();
        }).then(displayResults);
        }
 
        function displayResults(weather){
-           let city=document.querySelector('.location .city');
+         console.log(weather);
+           let city=document.querySelector('.loc .city');
            city.innerText= `${weather.name}, ${weather.sys.country}`;
 
            let now = new Date();
-  let date = document.querySelector('.location .date');
-  date.innerText = dateBuilder(now);
+  let date = document.querySelector('.loc .date');
+  date.innerText = dateBuild(now);
 
-  let temp = document.querySelector('.current .temp');
+  let temp = document.querySelector('.current .temperature');
   temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
 
   let weather_el = document.querySelector('.current .weather');
   weather_el.innerText = weather.weather[0].main;
 
-  let hilow = document.querySelector('.hi-low');
+  let hilow = document.querySelector('.high-low');
   hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
 }
 
-function dateBuilder (d) {
+function dateBuild(d) {
   let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -50,4 +50,3 @@ function dateBuilder (d) {
   return `${day} ${date} ${month} ${year}`;
 }
        
-
