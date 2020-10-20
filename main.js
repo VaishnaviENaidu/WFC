@@ -2,9 +2,6 @@ const api={ key: "b092b19b34b04b06e0260e9acd7f0578",
 base: "https://api.openweathermap.org/data/2.5/weather?id=1277333&appid=b092b19b34b04b06e0260e9acd7f0578"
 }
 
-
-
-
 const searchbox = document.querySelector(".search-box");
 searchbox.addEventListener("keypress", setQuery);
 
